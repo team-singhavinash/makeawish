@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Birthday Wisher</title>
+
+	<link href="{{ asset('css/app.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('css/vendors.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('css/plugins/forms/wizard.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<!-- fixed-top-->
+	<nav class="header-navbar navbar-expand-sm navbar navbar-with-menu navbar-light navbar-shadow p-0">
+		<div class="navbar-wrapper">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav mr-auto">
+					<li class="nav-item mobile-menu d-md-none float-left">
+						<button class="nav-link menu-toggle hamburger hamburger--arrow js-hamburger is-active"><span
+								class="hamburger-box"></span><span class="hamburger-inner"></span></button>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="navbar-brand nav-link"><img
+								src="{{ asset('images/logo/logo-dark.png') }}"></a>
+					</li>
+					<li class="nav-item d-md-none float-right"><a data-toggle="collapse" data-target="#navbar-mobile"
+							class="nav-link open-navbar-container collapsed" aria-expanded="false">
+							<i class="ft-ellipsis-h pe-2x icon-rotate-right"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="navbar-container content mt-1">
+				<div id="navbar-mobile" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav ml-auto float-right btn-group">
+						<li class="nav-item">
+							<a class="nav-link p-1" data-toggle="modal" data-target="#loginForm">Log In/Sign Up</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="{{ path('my-wishes') }}" class="nav-link p-1">My Wishes</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link p-1">About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!--/ fixed-top-->
+
+	<!--Login Modal -->
+	<div class="modal fade text-left" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel34"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title mx-auto" id="myModalLabel34">Birthday Wisher</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<ul class="nav nav-tabs nav-justified nav-top-border no-hover-bg">
+					<li class="nav-item">
+						<a class="nav-link active" id="base-login" data-toggle="tab" aria-controls="login" href="#login"
+							aria-expanded="true">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="base-signup" data-toggle="tab" aria-controls="signup" href="#signup"
+							aria-expanded="false">Signup</a>
+					</li>
+				</ul>
+				<div class="tab-content px-1 pt-1 border-grey border-lighten-2 border-0-top">
+					<div role="tabpanel" class="tab-pane active" id="login" aria-expanded="true"
+						aria-labelledby="base-login">
+						<form>
+							<div class="modal-body">
+								<label>Email: </label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="text" placeholder="Email Address" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-envelope font-medium-5 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+
+								<label>Password: </label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="password" placeholder="Password" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal"
+									value="Close">
+								<input type="submit" class="btn btn-outline-primary btn-lg" value="Login">
+							</div>
+						</form>
+					</div>
+
+					<div class="tab-pane" id="signup" aria-labelledby="base-signup">
+						<form>
+							<div class="modal-body">
+								<label>Email: </label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="text" placeholder="Email Address" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-envelope font-medium-5 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+
+								<label>Password: </label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="password" placeholder="Password" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal"
+									value="Close">
+								<input type="submit" class="btn btn-outline-primary btn-lg" value="Create an account">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Signup Modal -->
+	<div class="modal fade text-left" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel34"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="myModalLabel34">Signup</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form>
+					<div class="modal-body">
+						<label>Email: </label>
+						<div class="form-group position-relative has-icon-left">
+							<input type="text" placeholder="Email Address" class="form-control">
+							<div class="form-control-position">
+								<i class="fa fa-envelope font-medium-5 line-height-1 text-muted icon-align"></i>
+							</div>
+						</div>
+
+						<label>Password: </label>
+						<div class="form-group position-relative has-icon-left">
+							<input type="password" placeholder="Password" class="form-control">
+							<div class="form-control-position">
+								<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn btn-info float-left mr-auto" data-toggle="modal"
+							data-target="#loginForm">Login</a>
+						<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Close">
+						<input type="submit" class="btn btn-outline-primary btn-lg" value="Create an account">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- ////////////////////////////////////////////////////////////////////////////-->
+	<div class="d-flex align-items-center outer-div">
+		<div class="sidebar-detached sidebar-left sidebar-sticky ml-3" style="position: absolute; z-index: 1;">
+			<div class="sidebar">
+				<div class="sidebar-content card d-none d-lg-block">
+					<div class="card-body">
+						<div class="category-title pb-1 text-center">
+							<h4 class="mb-0">Send a wish!</h4>
+							<p class="card-text text-muted">And make them feel special</p>
+						</div>
+						<hr class="my-0 ">
+						<!-- Form sample -->
+						<div class="app-content container center-layout">
+							<div class="content-wrapper">
+								<section id="vertical-tabs">
+									<form action="#" class="number-tab-steps wizard-circle category-content">
+										<!-- Step 1 -->
+										<h6>Step 1</h6>
+										<fieldset>
+											<div class="form-group">
+												<label>Wisher's name:</label>
+												<input type="text" class="form-control" placeholder="Wisher's name"
+													name="wisher-name">
+											</div>
+
+											<div class="form-group">
+												<label>Wisher's phone number:</label>
+												<input type="phone" class="form-control"
+													placeholder="Wisher's phone number" name="wisher-phone-number">
+											</div>
+										</fieldset>
+
+										<!-- Step 2 -->
+										<h6>Step 2</h6>
+										<fieldset>
+											<div class="form-group">
+												<label>Wishee's name:</label>
+												<input type="text" class="form-control" placeholder="Wishee's Name"
+													name="wishee-name">
+											</div>
+
+											<div class="form-group">
+												<label>Wishee's phone number:</label>
+												<input type="phone" class="form-control"
+													placeholder="Wishee's phone number" name="wishee-phone-number">
+											</div>
+										</fieldset>
+
+										<!-- Step 3 -->
+										<h6>Step 3</h6>
+										<fieldset>
+											<div class="form-group">
+												<label>Birthday message:</label>
+												<textarea rows="3" cols="3" class="form-control"
+													placeholder="Type your message here" name="msg"></textarea>
+											</div>
+										</fieldset>
+									</form>
+								</section>
+							</div>
+						</div>
+						<!-- /form sample -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+		<div id="carousel-interval" class="carousel slide w-100" data-ride="carousel" data-interval="5000"
+			style="position: absolute;">
+			<div class="carousel-inner " role="listbox">
+				<div class="carousel-item active">
+					<img class="w-100" src="{{ asset('images/carousel/02.jpg') }}" alt="First slide">
+				</div>
+				<div class="carousel-item">
+					<img class="w-100" src="{{ asset('images/carousel/03.jpg') }}" alt="Second slide">
+				</div>
+				<div class="carousel-item">
+					<img class="w-100" src="{{ asset('images/carousel/01.jpg') }}" alt="Third slide">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="vendors/js/vendors.min.js"></script>
+	<script src="vendors/js/extensions/jquery.steps.min.js"></script>
+	<script src="js/scripts/forms/wizard-steps.js"></script>
+	<script src="js/core/app-menu.js"></script>
+	<script src="js/core/app.js"></script>
+	<script src="js/style.js"></script>
+</body>
+
+</html>

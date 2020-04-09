@@ -87,8 +87,8 @@
 }
 .app-content .wizard > .steps > ul > li.current .step
 {
-    color: #27A2CF; 
-    border-color: #27A2CF;
+    color: #967adc; 
+    border-color: #967adc;
     background-color: #fff;
 }
 .app-content .wizard > .steps > ul > li.disabled a
@@ -124,8 +124,8 @@
 .app-content .wizard > .steps > ul > li.done .step
 {
     color: #fff; 
-    border-color: #27A2CF;
-    background-color: #27A2CF;
+    border-color: #967adc;
+    background-color: #967adc;
 }
 .app-content .wizard > .steps > ul > li.error .step
 {
@@ -215,7 +215,7 @@
     color: #fff;
     border: 1px solid transparent; 
     border-radius: 2px;
-    background: #27A2CF;
+    background: #967adc;
 }
 .app-content .wizard > .actions > ul > li > a:hover
 {
@@ -288,7 +288,7 @@
     width: 50%;
     height: 5px;
 
-    background-color: #27A2CF;
+    background-color: #967adc;
 }
 .app-content .wizard.wizard-circle > .steps > ul > li.current:after
 {
@@ -321,18 +321,18 @@
     width: 50%;
     height: 2px;
 
-    background-color: #27A2CF;
+    background-color: #967adc;
 }
 .app-content .wizard.wizard-notification > .steps > ul > li.current .step
 {
     line-height: 36px; 
 
-    color: #27A2CF;
-    border: 2px solid #27A2CF;
+    color: #967adc;
+    border: 2px solid #967adc;
 }
 .app-content .wizard.wizard-notification > .steps > ul > li.current .step:after
 {
-    border-top-color: #27A2CF;
+    border-top-color: #967adc;
 }
 .app-content .wizard.wizard-notification > .steps > ul > li.current:after
 {
@@ -352,7 +352,7 @@
 }
 .app-content .wizard.wizard-notification > .steps > ul > li.done .step:after
 {
-    border-top-color: #27A2CF;
+    border-top-color: #967adc;
 }
 .app-content .wizard.wizard-notification > .steps .step
 {
@@ -439,7 +439,7 @@
     {
         content: '';
 
-        background-color: #27A2CF;
+        background-color: #967adc;
     }
     .app-content .wizard.vertical > .steps
     {
@@ -455,7 +455,7 @@
     }
     .app-content .wizard > .steps > ul > li.current:after
     {
-        background-color: #27A2CF;
+        background-color: #967adc;
     }
     .app-content .wizard.vertical > .steps
     {

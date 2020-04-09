@@ -1042,7 +1042,7 @@ select.form-control
 
 .btn-success ~ .dropdown-menu .dropdown-item.active
 {
-    background-color: #27A2CF;
+    background-color: #37bc9b;
 }
 
 .btn-danger ~ .dropdown-menu .dropdown-item.active
@@ -2559,12 +2559,12 @@ select.form-control
 
 .badge-success
 {
-    background-color: #27A2CF;
+    background-color: #37bc9b;
 }
 .badge-success.badge-glow
 {
-    -webkit-box-shadow: 0 0 10px #27A2CF;
-            box-shadow: 0 0 10px #27A2CF;
+    -webkit-box-shadow: 0 0 10px #37bc9b;
+            box-shadow: 0 0 10px #37bc9b;
 }
 .badge-success[href]:hover,
 .badge-success[href]:focus
@@ -2969,12 +2969,12 @@ select.form-control
 }
 .nav.nav-tabs.nav-top-border .nav-item a
 {
-    color: #27A2CF;
+    color: #37bc9b;
 }
 .nav.nav-tabs.nav-top-border .nav-item a.nav-link.active
 {
     color: #555; 
-    border-top: 3px solid #27A2CF;
+    border-top: 3px solid #37bc9b;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }

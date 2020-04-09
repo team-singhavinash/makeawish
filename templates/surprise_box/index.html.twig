@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>My Wishes</title>
+
+	<link href="{{ asset('css/app.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('css/vendors.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('vendors/css/file-uploaders/jquery.fileupload.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('vendors/css/file-uploaders/jquery.fileupload-ui.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('vendors/css/file-uploaders/dropzone.min.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('css/plugins/file-uploaders/dropzone.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('vendors/css/ui/prism.min.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-wish">
+	<!-- fixed-top-->
+	<nav class="header-navbar navbar-expand-sm navbar navbar-with-menu navbar-light navbar-shadow p-0">
+		<div class="navbar-wrapper">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav mr-auto">
+					<li class="nav-item mobile-menu d-md-none float-left">
+						<button class="nav-link menu-toggle hamburger hamburger--arrow js-hamburger is-active">
+							<span class="hamburger-box"></span>
+							<span class="hamburger-inner"></span>
+						</button>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="navbar-brand nav-link"><img
+								src="{{ asset('images/logo/logo-dark.png') }}"></a>
+					</li>
+					<li class="nav-item d-md-none float-right">
+						<a data-toggle="collapse" data-target="#navbar-mobile"
+							class="nav-link open-navbar-container collapsed" aria-expanded="false">
+							<i class="ft-ellipsis-h pe-2x icon-rotate-right"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="navbar-container content mt-1">
+				<div id="navbar-mobile" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav ml-auto float-right">
+						<li class="nav-item">
+							<a class="nav-link p-1" data-toggle="modal" data-target="#loginForm">Log In/Sign
+								Up</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="{{ path('home') }}" class="nav-link p-1">Home</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link p-1">About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!--/ fixed-top-->
+
+	<!--Login Modal -->
+	<div class="modal fade text-left" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title mx-auto" id="myModalLabel34">Birthday Wisher</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<ul class="nav nav-tabs nav-justified nav-top-border no-hover-bg">
+					<li class="nav-item">
+						<a class="nav-link active" id="base-login" data-toggle="tab" aria-controls="login" href="#login"
+							aria-expanded="true">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="base-signup" data-toggle="tab" aria-controls="signup" href="#signup"
+							aria-expanded="false">Signup</a>
+					</li>
+				</ul>
+				<div class="tab-content px-1 pt-1 border-grey border-lighten-2 border-0-top">
+					<div role="tabpanel" class="tab-pane active" id="login" aria-expanded="true"
+						aria-labelledby="base-login">
+						<form>
+							<div class="modal-body">
+								<label>Email:
+								</label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="text" placeholder="Email Address" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-envelope font-medium-5 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+
+								<label>Password:
+								</label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="password" placeholder="Password" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal"
+									value="Close">
+								<input type="submit" class="btn btn-outline-primary btn-lg" value="Login">
+							</div>
+						</form>
+					</div>
+
+					<div class="tab-pane" id="signup" aria-labelledby="base-signup">
+						<form>
+							<div class="modal-body">
+								<label>Email:
+								</label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="text" placeholder="Email Address" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-envelope font-medium-5 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+
+								<label>Password:
+								</label>
+								<div class="form-group position-relative has-icon-left">
+									<input type="password" placeholder="Password" class="form-control">
+									<div class="form-control-position">
+										<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal"
+									value="Close">
+								<input type="submit" class="btn btn-outline-primary btn-lg" value="Create an account">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3 d-flex justify-content-center mt-1">
+				<div class="card">
+					<div class="card-header" style="border-bottom: none;">
+						<div class="card-title text-center pb-0">
+							<h4>Add surprise box</h4>
+							<small>for</small>
+							<input type="text" value="Avinash Singh" style="font-style: italic;" class="form-control round">
+						</div>
+					</div>
+					<div class="card-content collpase show">
+						<div class="card-body">
+
+							<div class="card-text">
+								<h6 class="card-text">Add the surprises, available for you in the box and surprise
+									your loved ones</h6>
+							</div>
+
+							<form class="form">
+								<div class="form-body">
+									<p class="mt-2">Add photo of yours with wishee</p>
+
+									<div action="#" class="dropzone dropzone-area h-25 mb-1" id="dpz-single-file"></div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label for="projectinput5" class="sr-only"></label>
+												<select id="projectinput5" name="interested" class="form-control">
+													<option value="none" selected="" disabled="">Select surprise type
+													</option>
+													<option value="cwm">Greeting card with message</option>
+													<option value="video">Video</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group d-none">
+										<label for="greeting_msg" class="sr-only">Enter your message</label>
+										<textarea id="greeting_msg" rows="5" class="form-control" name="greeting_msg"
+											placeholder="Enter your message"></textarea>
+									</div>
+
+									<div class="form-group d-none">
+										<span class="btn btn-success fileinput-button mb-2">
+											<i class="icon-plus"></i>
+											<span>Add files...</span>
+											<input type="file" name="vww">
+										</span>
+									</div>
+								</div>
+
+								<div class="form-actions float-right mt-0 p-1" style="border-top: none;">
+									<button type="button" class="btn btn-outline-danger mr-1">
+										<i class="ft-x"></i> Cancel
+									</button>
+									<button type="submit" class="btn btn-outline-info">
+										<i class="ft-check"></i> Send
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="{{ asset('vendors/js/vendors.min.js') }}"></script>
+	<script src="{{ asset('vendors/js/ui/jquery.sticky.js') }}"></script>
+	<script src="{{ asset('vendors/js/extensions/dropzone.min.js') }}"></script>
+	<script src="{{ asset('vendors/js/ui/prism.min.js') }}"></script>
+	<script src="{{ asset('js/scripts/extensions/dropzone.js') }}"></script>
+	<script src="{{ asset('js/style.js') }}"></script>
+</body>
+
+</html>
